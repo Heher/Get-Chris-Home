@@ -1,0 +1,246 @@
+/* FONTS */
+@font-face {
+    font-family: 'ScotchModernDisplay';
+    src: url(./fonts/scotchmoderndisplay.eot);
+    src: url(./fonts/scotchmoderndisplay.eot?#iefix) format("embedded-opentype"), url(./fonts/scotchmoderndisplay.woff2) format("woff2"), url(./fonts/scotchmoderndisplay.woff) format("woff"), url(./fonts/scotchmoderndisplay.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Averta-Semibold';
+    src: url(./fonts/averta-semibold.eot);
+    src: url(./fonts/averta-semibold.eot?#iefix) format("embedded-opentype"),url(./fonts/averta-semibold.woff2) format("woff2"),url(./fonts/averta-semibold.woff) format("woff"),url(./fonts/averta-semibold.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Averta-Light';
+    src: url(./fonts/averta-light.eot);
+    src: url(./fonts/averta-light.eot?#iefix) format("embedded-opentype"),url(./fonts/averta-light.woff2) format("woff2"),url(./fonts/averta-light.woff) format("woff"),url(./fonts/averta-light.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+
+/* OVERALL STYLES */
+html {
+	font-size: 16px;
+}
+
+body {
+	background: #f5f5f5;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	font-family: 'ScotchModernDisplay';
+	font-weight: normal;
+}
+
+p {
+	font-family: 'Averta-Light';
+}
+
+
+/* HEADER */
+header {
+	background: #ffffff;
+	text-align: center;
+	padding: 41px 0 27px 0;
+}
+
+header h1, header p {
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+header h1 {
+	font-size: 54px;
+	margin-bottom: 12px;
+	letter-spacing: -0.01em;
+}
+
+header p {
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0.05em;
+}
+
+
+/* HERO */
+.hero {
+	text-align: center;
+	margin: 51px 0 0 0;
+}
+
+.hero img {
+	width: 900px;
+	height: 430px;
+}
+
+.hero-content {
+	position: relative;
+	margin: -70px auto 32px auto;
+	padding: 22px 34px;
+	background: #ffffff;
+	width: 500px;
+	z-index: 1;
+}
+
+.hero-content h2 {
+	margin: 0 auto 10px auto;
+	font-size: 40px;
+	text-align: center;
+	max-width: 380px;
+}
+
+.hero-content p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+
+/* SELECTION LINKS */
+.selection-wrapper {
+	width: 800px;
+	margin: 0 auto 51px auto;
+	border-bottom: 1px solid #cccccc;
+}
+
+.selection {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 60px;
+}
+
+.selection a {
+	position: relative;
+	font-family: 'Averta-Semibold';
+	color: #000000;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	padding: 5px 10px;
+	margin-bottom: 7px;
+}
+
+.selection a.selected::after {
+	content: '';
+	border-top: 7px solid #3366ff;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	position: absolute;
+	left: calc(50% - 10px);
+	bottom: -14px;
+}
+
+
+/* SELECTION FIELD */
+.selection-field {
+	display: none;
+	width: 800px;
+	margin: 0 auto 20px;
+}
+
+.selection-field.selected {
+	display: flex;
+}
+
+.selection-field img {
+	margin-left: 20px;
+}
+
+.selection-copy {
+	margin: 0 20px 0 40px;
+	max-width: 560px;
+}
+
+.selection-copy h2 {
+	font-family: 'Averta-Light';
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 36px;
+	max-width: 400px;
+	margin: 0 0 15px 0;
+}
+
+.selection-copy p {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+
+/* MOBILE STYLES */
+@media (max-width: 375px) {
+	header {
+		padding-bottom: 40px;
+	}
+
+	header h1 {
+		font-size: 65px;
+		margin: 0 40px 15px 40px;
+	}
+
+	header p {
+		margin: 0 40px;
+		line-height: 26px;
+	}
+
+	.hero {
+		margin-top: 0;
+	}
+
+	.hero img {
+		margin-left: -260px;
+	}
+
+	.hero-content {
+		width: auto;
+		margin: -50px 20px 32px 20px;
+		padding: 34px 38px;
+	}
+
+	.hero-content h2 {
+		font-size: 34px;
+		margin-bottom: 16px;
+	}
+
+	.selection-wrapper {
+		width: auto;
+		margin: 0 20px;
+	}
+
+	.selection {
+		margin: 0;
+	}
+
+	.selection-field {
+		flex-direction: column;
+		width: auto;
+	}
+
+	.selection-field img {
+		margin: 26px 20px 0 20px;
+	}
+
+	.selection-copy {
+		margin: 0;
+	}
+
+	.selection-copy h2 {
+		text-align: center;
+		font-size: 26px;
+		margin: 0 45px 20px 45px;
+	}
+
+	.selection-copy p {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 60px 60px;
+	}
+}
